@@ -1,0 +1,29 @@
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact {
+  transition: 0.15s ease-in-out;
+  color: var(--text-color);
+}
+
+.contact:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 450px) {
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}

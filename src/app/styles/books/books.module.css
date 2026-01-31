@@ -1,0 +1,35 @@
+.booksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.booksContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.booksList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .booksTitle {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .booksTitle {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,240 @@
+.homeContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcomeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px 60px 20px;
+  width: 100%;
+  background: var(--welcome-background-color);
+}
+
+.welcomeContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcomeText {
+  white-space: pre-line;
+}
+
+.picture {
+  border-radius: 50%;
+}
+
+.image {
+  width: 100%;
+  display: block;
+}
+
+.curve {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: var(--curve-background-color);
+}
+
+.svg {
+  margin: 0;
+  padding: 0;
+  fill: var(--curve-fill-color);
+}
+
+.profileImageContainer {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sectionHeading {
+  font-size: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.technicalSkillsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+
+.technicalSkillsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.projectsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+
+.projectContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.projectCard {
+  flex: 0 0 30%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectToggles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.projectToggle {
+  font-family: "Wotfard", sans-serif;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+  color: var(--text-color);
+}
+
+.projectToggle:hover {
+  opacity: 0.75;
+}
+
+.interestsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.interestList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  padding: 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 875px) {
+  .interestList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .interestList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .welcomeContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 150px) {
+  .welcomeText {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 285px) {
+  .welcomeText {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 310px) {
+  .welcomeText {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 340px) {
+  .welcomeText {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 430px) {
+  .welcomeText {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 850px) {
+  .welcomeText {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 960px) {
+  .welcomeText {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .welcomeText {
+    font-size: 45px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcomeText {
+    font-size: 50px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}

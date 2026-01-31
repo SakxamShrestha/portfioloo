@@ -1,0 +1,405 @@
+.resumeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.resumeContentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--resume-border);
+  gap: 10px;
+  padding: 20px;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.link {
+  transition: 0.15s ease-in-out;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.link:hover {
+  opacity: 0.75;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sectionHeading {
+  margin: 0;
+  font-size: 22px;
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px solid var(--text-color);
+}
+
+.svg {
+  height: 40px;
+  width: 40px;
+  fill: var(--text-color);
+}
+
+.schoolContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding: 0 20px 0 20px;
+}
+
+.school {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.schoolDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.experienceContainer {
+  padding: 0 20px 0 20px;
+  width: 100%;
+}
+
+.experienceEntry {
+  margin-bottom: 16px;
+}
+
+.experienceEntry:last-child {
+  margin-bottom: 0;
+}
+
+.experienceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+
+.experienceLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.experienceMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.text {
+  margin: 0;
+  font-size: 14px;
+}
+
+.accomplishmentContainer {
+  padding: 0 20px 0 20px;
+}
+
+.accomplishmentTextContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.list {
+  margin: 0;
+}
+
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px 0 20px;
+  gap: 10px;
+}
+
+.project {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.projectTitle {
+  font-weight: bolder;
+}
+
+.projectDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.techStack {
+  font-weight: 400;
+}
+
+.projectNotes {
+  margin: 0;
+  width: 100%;
+}
+
+.technicalSkillsContainer {
+  width: 100%;
+  padding: 0 20px 0 20px;
+}
+
+.skill {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (min-width: 0px) {
+  .resumeContentContainer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1075px) {
+  .resumeContentContainer {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1210px) {
+  .resumeContentContainer {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1395px) {
+  .resumeContentContainer {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1615px) {
+  .resumeContentContainer {
+    width: 60%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .resumeContentContainer {
+    width: 50%;
+  }
+}
+
+@media (min-width: 2450px) {
+  .resumeContentContainer {
+    width: 40%;
+  }
+}
+
+@media (min-width: 3225px) {
+  .resumeContentContainer {
+    width: 30%;
+  }
+}
+
+@media (min-width: 3900px) {
+  .resumeContentContainer {
+    width: 25%;
+  }
+}
+
+@media (max-width: 985px) {
+  .links {
+    flex-direction: column;
+  }
+
+  .linkDivider {
+    display: none;
+  }
+}
+
+@media (min-width: 985px) {
+  .links {
+    flex-direction: row;
+  }
+
+  .linkDivider {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .projectHeading {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  .projectHeading {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 925px) {
+  .accomplishmentHeader {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 925px) {
+  .accomplishmentHeader {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 500px) {
+  .accomplishmentHeader {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .accomplishmentTextContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .accomplishmentHeader {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  .skill {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .space {
+    display: none;
+  }
+}
+
+@media (min-width: 840px) {
+  .skill {
+    flex-direction: row;
+  }
+
+  .space {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 455px) {
+  .name {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 455px) {
+  .name {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 330px) {
+  .name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .schoolDetails {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .experienceHeader {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .experienceMeta {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 575px) {
+  .projectDetails {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .list {
+    padding-left: 0;
+  }
+
+  .projectNotes {
+    padding-left: 0;
+  }
+}

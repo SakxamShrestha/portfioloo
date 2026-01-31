@@ -1,0 +1,22 @@
+[
+  {
+    "name": "TV Series NLP Analyzer",
+    "image": "/assets/projects/thumbnails/tv-series-nlp.webp",
+    "description": "An NLP system that scrapes and analyzes over 10,000+ character dialogues using Scrapy and Spacy, with an interactive Gradio web UI featuring a character chatbot trained with Llama 3.1.",
+    "tags": ["Python", "Scrapy", "Spacy", "Llama 3.1", "Gradio"],
+    "year": 2024,
+    "github": "",
+    "gradient": "linear-gradient(#5D427F, #825B8F, #9B6B9A)",
+    "rotate": "rotate(358deg)"
+  },
+  {
+    "name": "Chest Cancer Classification",
+    "image": "/assets/projects/thumbnails/chest-cancer.webp",
+    "description": "An end-to-end deep learning solution using EfficientNet-B3 for automated chest cancer classification from CT scans, achieving 85% accuracy with a modern MLOps pipeline.",
+    "tags": ["Python", "PyTorch", "AWS", "Docker", "MLflow", "DVC"],
+    "year": 2024,
+    "github": "https://github.com/SakxamShrestha/chest-cancer-classifier",
+    "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
+    "rotate": "rotate(2deg)"
+  }
+]

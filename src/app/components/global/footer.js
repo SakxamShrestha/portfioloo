@@ -1,0 +1,18 @@
+import styles from "../../styles/global/footer.module.css";
+
+export default function Footer() {
+  return (
+    <div className={styles.footerContainer}>
+      <div className={`content ${styles.footerContent}`}>
+        <div>
+          <label>© 2026 - Present Sakxam Shrestha. All Rights Reserved.</label>
+        </div>
+        <div>
+          <a className={styles.contact} href="mailto:aayush.sood@icloud.com">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}

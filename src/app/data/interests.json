@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Technology",
+    "icon": "FaLaptop",
+    "description": "Technology is the backbone of modern society, driving innovation and transformation in every field. My fascination with technology stems from its ability to solve complex problems and improve our quality of life. Whether it's artificial intelligence, software development, or emerging tools, I enjoy staying ahead of the curve and exploring how they can create a better future.",
+    "channels": []
+  },
+  {
+    "name": "Soccer",
+    "icon": "GiSoccerKick",
+    "description": "Soccer is a passion that combines strategy, teamwork, and athleticism. I enjoy following leagues and tournaments worldwide and appreciate the sport's ability to bring people together.",
+    "channels": []
+  },
+  {
+    "name": "Finance (Stock Market)",
+    "icon": "FaChartLine",
+    "description": "I'm interested in finance and the stock market—how markets work, investing fundamentals, and the intersection of economics with technology and global events. I enjoy learning about valuation, market trends, and long-term investing strategies.",
+    "channels": []
+  },
+  {
+    "name": "Literature",
+    "icon": "FaBook",
+    "description": "Literature opens windows into different worlds, perspectives, and eras. I enjoy fiction and non-fiction alike, from classics to contemporary works, and value how reading sharpens thinking and empathy.",
+    "channels": []
+  },
+  {
+    "name": "Physics",
+    "icon": "FaAtom",
+    "description": "Physics offers a profound understanding of the universe, from the smallest particles to the largest cosmic structures. I'm captivated by concepts like relativity, quantum mechanics, and thermodynamics, and how they shape our view of reality.",
+    "channels": []
+  }
+]

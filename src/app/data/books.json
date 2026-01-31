@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Wonder",
+    "author": "R.J. Palacio",
+    "cover": "/assets/books/Wonder.webp",
+    "bookLink": "https://www.goodreads.com/book/show/11387515-wonder",
+    "authorLink": "https://www.goodreads.com/author/show/4859212.R_J_Palacio"
+  },
+  {
+    "title": "The Communist Manifesto",
+    "author": "Karl Marx & Friedrich Engels",
+    "cover": "/assets/books/thecommunistmanifesto.webp",
+    "bookLink": "https://www.goodreads.com/book/show/1842.The_Communist_Manifesto",
+    "authorLink": "https://www.goodreads.com/author/show/7084.Karl_Marx"
+  },
+  {
+    "title": "Never Let Me Go",
+    "author": "Kazuo Ishiguro",
+    "cover": "/assets/books/neverletmego.webp",
+    "bookLink": "https://www.goodreads.com/book/show/6334.Never_Let_Me_Go",
+    "authorLink": "https://www.goodreads.com/author/show/4349.Kazuo_Ishiguro"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "cover": "/assets/books/1984.webp",
+    "bookLink": "https://www.goodreads.com/book/show/5470.1984",
+    "authorLink": "https://www.goodreads.com/author/show/3706.George_Orwell"
+  },
+  {
+    "title": "Love in the Time of Cholera",
+    "author": "Gabriel García Márquez",
+    "cover": "/assets/books/loveinthetimeofcholera.webp",
+    "bookLink": "https://www.goodreads.com/book/show/9712.Love_in_the_Time_of_Cholera",
+    "authorLink": "https://www.goodreads.com/author/show/134903.Gabriel_Garc_a_M_rquez"
+  },
+  {
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "cover": "/assets/books/BriefHistoryTime.webp",
+    "bookLink": "https://www.goodreads.com/book/show/3869.A_Brief_History_of_Time",
+    "authorLink": "https://www.goodreads.com/author/show/1401.Stephen_Hawking"
+  },
+  {
+    "title": "The Stranger",
+    "author": "Albert Camus",
+    "cover": "/assets/books/thestranger.webp",
+    "bookLink": "https://www.goodreads.com/book/show/49552.The_Stranger",
+    "authorLink": "https://www.goodreads.com/author/show/957894.Albert_Camus"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "cover": "/assets/books/crimeandpunishment.webp",
+    "bookLink": "https://www.goodreads.com/book/show/7144.Crime_and_Punishment",
+    "authorLink": "https://www.goodreads.com/author/show/3137322.Fyodor_Dostoevsky"
+  }
+]

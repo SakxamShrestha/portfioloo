@@ -1,0 +1,51 @@
+.interestContainer {
+  padding: 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  break-inside: avoid;
+  text-align: justify;
+  overflow: visible;
+  text-align: justify;
+}
+
+.interestTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.15s ease-in-out;
+  overflow: visible;
+}
+
+.interestContainer:hover .interestTitle {
+  color: var(--header-hover-color);
+}
+
+.interestIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.links {
+  text-align: left;
+  width: 100%;
+}
+
+.link {
+  transition: 0.15s ease-in-out;
+  border-bottom: 2px solid var(--header-hover-color);
+  color: var(--text-color);
+}
+
+.linkTexts {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.link:hover {
+  opacity: 0.75;
+}

@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid var(--header-border);
+  background: var(--header-background);
+  box-shadow: var(--header-box-shadow);
+  backdrop-filter: var(--header-backdrop-filter);
+  -webkit-backdrop-filter: var(--header-backdrop-filter);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-right: 20px;
+  transition: 0.15s ease-in-out;
+  color: var(--text-color);
+}
+
+.title:hover {
+  opacity: 0.75;
+}
+
+.links {
+  gap: 5px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.headerMenu {
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 98;
+  background: var(--mobile-header-background);
+}
+
+.menuClose {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+
+.menuSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  gap: 20px;
+}
+
+.menuButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.pageIcon {
+  height: 40px;
+  width: 40px;
+  color: var(--text-color);
+}
+
+.menuLink {
+  width: 100%;
+  color: var(--text-color);
+}
+
+.menuLinkText {
+  margin: 0;
+}
+
+@media (min-width: 840px) {
+  .menu {
+    display: none;
+  }
+
+  .links {
+    display: flex;
+  }
+
+  .pages {
+    display: flex;
+  }
+}
+
+@media (max-width: 840px) {
+  .menu {
+    display: block;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .pages {
+    display: none;
+  }
+}
+
+@media (max-width: 310px) {
+  .title {
+    font-size: 10px;
+  }
+}
