@@ -46,8 +46,7 @@ function getTocFromMarkdown(markdown) {
   return headings.filter((h) => h.depth >= 1 && h.depth <= 4);
 }
 
-export async function generateStaticParams() {
-  const posts = require("../../../../public/posts.json");
+export function generateStaticParams() {
   return posts.map((post) => ({ id: post.slug }));
 }
 
