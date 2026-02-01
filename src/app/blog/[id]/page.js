@@ -46,10 +46,6 @@ function getTocFromMarkdown(markdown) {
   return headings.filter((h) => h.depth >= 1 && h.depth <= 4);
 }
 
-export function generateStaticParams() {
-  return posts.map((post) => ({ id: post.slug }));
-}
-
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
