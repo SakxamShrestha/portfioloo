@@ -1,11 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-const fs = require("fs");
-const path = require("path");
-
 const siteUrl = "https://www.sakxamshrestha.com/";
-
-const blogJsonPath = path.join(__dirname, "public/posts.json");
-const allBlogs = JSON.parse(fs.readFileSync(blogJsonPath, "utf8"));
 
 module.exports = {
   siteUrl,
@@ -14,26 +8,16 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
 
-  exclude: ["/blog", "/books", "/resume", "/"],
+  exclude: ["/books", "/resume", "/"],
 
   additionalPaths: async () => {
-    const additionalPaths = ["/blog", "/books", "/resume", "/"];
+    const additionalPaths = ["/", "/books", "/resume"];
 
-    const blogPaths = allBlogs.map((blog) => ({
-      loc: `${siteUrl}/blog/${blog.slug}`,
-      lastmod: new Date(blog.meta.date).toISOString(),
+    return additionalPaths.map((p) => ({
+      loc: `${siteUrl}${p === "/" ? "" : p}`,
+      lastmod: new Date().toISOString(),
       changefreq: "monthly",
-      priority: 0.8,
+      priority: p === "/" ? 1.0 : 0.7,
     }));
-
-    return [
-      ...additionalPaths.map((path) => ({
-        loc: `${siteUrl}${path === "/" ? "" : path}`,
-        lastmod: new Date().toISOString(),
-        changefreq: "monthly",
-        priority: path === "/" ? 1.0 : 0.7,
-      })),
-      ...blogPaths,
-    ];
   },
 };
