@@ -1,11 +1,18 @@
+import fs from "fs";
+import path from "path";
 import { marked } from "marked";
 import { notFound } from "next/navigation";
-import posts from "../../../../public/posts.json";
 
 import BackToTopButton from "@/app/components/blog/backToTopButton";
 import TableOfContents from "@/app/components/blog/TableOfContents";
 
 import styles from "../../styles/blog/blogPost.module.css";
+
+function getPosts() {
+  const filePath = path.join(process.cwd(), "public", "posts.json");
+  const content = fs.readFileSync(filePath, "utf-8");
+  return JSON.parse(content);
+}
 
 function slugify(anyText) {
   const text = (anyText ?? "").toString().replace(/\s+/g, " ").trim();
@@ -49,12 +56,14 @@ function getTocFromMarkdown(markdown) {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return posts.map((post) => ({ id: post.slug }));
+  const posts = getPosts();
+  return Array.isArray(posts) ? posts.map((post) => ({ id: post.slug })) : [];
 }
 
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
+  const posts = getPosts();
 
   const post = posts.find((p) => p.slug === id);
 
@@ -103,6 +112,7 @@ export async function generateMetadata({ params }) {
 export default async function BlogPostPage({ params }) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
+  const posts = getPosts();
 
   const post = posts.find((p) => p.slug === id);
   if (!post) return notFound();
