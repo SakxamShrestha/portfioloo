@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+# Host
+Host: https://www.sakxamshrestha.com/
+
 # Sitemaps
 Sitemap: https://www.sakxamshrestha.com/sitemap.xml
