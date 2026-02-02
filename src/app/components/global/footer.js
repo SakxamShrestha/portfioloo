@@ -8,7 +8,7 @@ export default function Footer() {
           <label>© 2026 - Present Sakxam Shrestha. All Rights Reserved.</label>
         </div>
         <div>
-          <a className={styles.contact} href="mailto:aayush.sood@icloud.com">
+          <a className={styles.contact} href="mailto:sakxamshrestha57@gmail.com">
             Contact
           </a>
         </div>
