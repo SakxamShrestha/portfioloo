@@ -24,7 +24,11 @@
     "name": "Literature",
     "icon": "FaBook",
     "description": "Literature opens windows into different worlds, perspectives, and eras. I enjoy fiction and non-fiction alike, from classics to contemporary works, and value how reading sharpens thinking and empathy.",
-    "channels": []
+    "channels": [
+      { "name": "Kazuo Ishiguro", "link": "https://www.goodreads.com/author/show/4280.Kazuo_Ishiguro?from_search=true&from_srp=true" },
+      { "name": "B.P. Koirala", "link": "https://www.goodreads.com/author/show/4670920.Bishweshwar_Prasad_Koirala" },
+      { "name": "Khaled Hosseini", "link": "https://www.goodreads.com/author/show/569.Khaled_Hosseini" }
+    ]
   },
   {
     "name": "Physics",

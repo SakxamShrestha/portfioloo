@@ -35,7 +35,7 @@ export default function Interest(props) {
       </h1>
       <p>{props.description}</p>
       <div className={styles.links}>
-        <p>My favorite creators I follow are: </p>
+        <p>{props.name === "Literature" ? "My favorite writers are: " : "My favorite creators I follow are: "}</p>
         <div className={styles.linkTexts}>
           {props.channels
             .sort((a, b) => a.name.localeCompare(b.name))
