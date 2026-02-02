@@ -207,7 +207,7 @@ export default function Header() {
                   </motion.div>
                 </a>
                 <a
-                  href="https://linktr.ee/aayushsood"
+                  href="https://linktr.ee/sakxamshrestha"
                   target="_blank"
                   className={styles.menuLink}
                 >
