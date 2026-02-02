@@ -117,10 +117,7 @@ const structuredData = {
   description:
     "Hi, I'm Sakxam And I am a fullstack developer! I'm based in Nova Scotia, Canada, and I'm passionate about Math, Software Engineering, Gaming, and Jiu Jitsu.",
   sameAs: [
-    "https://www.linkedin.com/in/soodaayush/",
-    "https://github.com/soodaayush",
-    "https://www.youtube.com/@soodaayush",
-    "https://leetcode.com/u/soodaayush/",
+    "https://www.linkedin.com/in/sakxam-shrestha-3a817a237/",
   ],
   image: {
     "@type": "ImageObject",
