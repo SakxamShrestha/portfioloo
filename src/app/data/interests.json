@@ -9,7 +9,10 @@
     "name": "Soccer",
     "icon": "GiSoccerKick",
     "description": "Soccer is a passion that combines strategy, teamwork, and athleticism. I enjoy following leagues and tournaments worldwide and appreciate the sport's ability to bring people together.",
-    "channels": []
+    "channels": [
+      { "name": "balón - English", "link": "https://www.youtube.com/@balon-english" },
+      { "name": "CBS Sports Golazo", "link": "https://www.youtube.com/@cbssportsgolazo" }
+    ]
   },
   {
     "name": "Finance (Stock Market)",
