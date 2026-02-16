@@ -26,11 +26,9 @@
     "tags": [
       "OpenAI",
       "GPT-3.5-turbo",
-      "Embeddings",
       "Pinecone",
       "React 18",
       "Node.js",
-      "Express",
       "Supabase",
       "PostgreSQL"
     ],
@@ -38,5 +36,23 @@
     "github": "https://github.com/SakxamShrestha/sikauneAI",           
     "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
     "rotate": "rotate(2deg)"
+  },
+  {
+    "name": "TradeSent.AI",
+    "image": "/assets/projects/thumbnails/meroguru-ai.webp",
+    "description": "TradeSent.AI is a real-time, automated trading system that utilizes a three-tier architecture to bridge the gap between financial news/social sentiment and trade execution, allowing retail users to trade based on market buzz with minimal latency.",
+    "tags": [
+      "Alpaca (Trading & News API)", 
+      "FinBERT",
+      "Llama 3 (via Groq/Anthropic)",
+      "RLunarCrush API",
+      "Redis"
+    ],
+    "year": 2026,
+    "github": "https://github.com/SakxamShrestha/sentiment-driven-options-trading-system",           
+    "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
+    "rotate": "rotate(2deg)"
+
   }
 ]
+
