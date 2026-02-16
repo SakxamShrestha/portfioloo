@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
-import { FaBook, FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import { FaBlog, FaBook, FaGithub, FaMoon, FaSun } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
@@ -35,6 +35,9 @@ export default function Header() {
             <h1>Sakxam Shrestha</h1>
           </Link>
           <div className={styles.pages}>
+            <Link className={styles.title} href="/blog">
+              <h2>Blog</h2>
+            </Link>
             <Link className={styles.title} href="/books">
               <h2>Books</h2>
             </Link>
@@ -137,6 +140,22 @@ export default function Header() {
                 </motion.button>
               </div>
               <div className={styles.menuSection}>
+                <Link
+                  className={styles.menuLink}
+                  href="/blog"
+                  onClick={openHamburgerMenu}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={styles.menuButton}
+                  >
+                    <h2 className={styles.menuLinkText}>Blog</h2>
+                    <div>
+                      <FaBlog className={styles.pageIcon} />
+                    </div>
+                  </motion.div>
+                </Link>
                 <Link
                   className={styles.menuLink}
                   href="/books"

@@ -18,5 +18,25 @@
     "github": "https://github.com/SakxamShrestha/chest-cancer-classifier",
     "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
     "rotate": "rotate(2deg)"
+  },
+  {
+    "name": "MeroGuru AI",
+    "image": "/assets/projects/thumbnails/meroguru-ai.webp",
+    "description": "MeroGuru AI is an intelligent, RAG-powered educational platform that leverages hybrid semantic search and GPT-3.5 to provide grade-specific, personalized tutoring for students in Nepal.",
+    "tags": [
+      "OpenAI",
+      "GPT-3.5-turbo",
+      "Embeddings",
+      "Pinecone",
+      "React 18",
+      "Node.js",
+      "Express",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "year": 2025,
+    "github": "https://github.com/SakxamShrestha/sikauneAI",           
+    "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
+    "rotate": "rotate(2deg)"
   }
 ]

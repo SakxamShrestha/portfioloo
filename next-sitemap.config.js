@@ -8,10 +8,10 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
 
-  exclude: ["/books", "/resume", "/"],
+  exclude: ["/blog", "/books", "/resume", "/"],
 
   additionalPaths: async () => {
-    const additionalPaths = ["/", "/books", "/resume"];
+    const additionalPaths = ["/", "/blog", "/books", "/resume"];
 
     return additionalPaths.map((p) => ({
       loc: `${siteUrl}${p === "/" ? "" : p}`,
