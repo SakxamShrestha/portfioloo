@@ -1,0 +1,201 @@
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+.timelineContent {
+  width: 100%;
+  max-width: 900px;
+}
+
+.sectionHeading {
+  font-size: 50px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--header-hover-color) 0%,
+    var(--text-color) 50%,
+    var(--header-hover-color) 100%
+  );
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 60px;
+  padding-bottom: 40px;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.content {
+  padding: 20px 24px;
+  background: var(--curve-background-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  transition: box-shadow 0.2s ease;
+}
+
+html.light .content {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.light .logo {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.logo img {
+  object-fit: contain;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 0;
+}
+
+.yearBadge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--header-hover-color);
+  background: rgba(100, 255, 218, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+html.light .yearBadge {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--header-hover-color);
+}
+
+.title {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--text-color);
+}
+
+.subtitle {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.88;
+  line-height: 1.5;
+}
+
+.description {
+  font-size: 14px;
+  margin: 10px 0 0;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.typeBadge {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.typeBadge.education {
+  color: var(--header-hover-color);
+  background: rgba(100, 255, 218, 0.15);
+}
+
+.typeBadge.experience {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.15);
+}
+
+html.light .typeBadge.education {
+  background: rgba(15, 118, 110, 0.12);
+}
+
+html.light .typeBadge.experience {
+  color: #6d28d9;
+  background: rgba(124, 58, 237, 0.12);
+}
+
+/* Desktop: alternating left/right */
+@media (min-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timelineItem {
+    padding-left: 0;
+    padding-bottom: 60px;
+    width: 50%;
+  }
+
+  .timelineItem.left {
+    padding-right: 50px;
+    text-align: right;
+  }
+
+  .timelineItem.left .content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .timelineItem.left .typeBadge {
+    right: auto;
+    left: 20px;
+  }
+
+  .timelineItem.right {
+    margin-left: 50%;
+    padding-left: 50px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {"year":"2019","title":"CVM Secondary High School","subtitle":"Nepal","type":"education","logo":"/assets/timeline/cvm.webp"},
+  {"year":"July 2019 – Oct 2021","title":"Khwopa HSS","subtitle":"Nepal","type":"education","logo":"/assets/timeline/khwopa.webp"},
+  {"year":"Aug 2022 – July 2023","title":"Freelance SAT Tutor","subtitle":"Nepal","type":"experience"},
+  {"year":"Aug 2023 – May 2027","title":"Bachelor of Science in Computer Science","subtitle":"Fisk University, Nashville, TN","type":"education","logo":"/assets/timeline/fisk.webp"},
+  {"year":"March 2024 – May 2024","title":"MetaScholar Intern","subtitle":"Thurgood Marshall College Fund, Atlanta, GA","type":"experience","logo":"/assets/timeline/tmcf.webp"},
+  {"year":"May 2024 – Aug 2024","title":"Data Analytics Intern","subtitle":"Tennessee Education Lottery Corporation, Nashville, TN","type":"experience","logo":"/assets/timeline/tnelc.webp"},
+  {"year":"Aug 2024 – Sep 2024","title":"Web3 Security and Data Analytics Extern","subtitle":"Webacy, Remote","type":"experience","logo":"/assets/timeline/webacy.webp"},
+  {"year":"Aug 2024 – Jan 2025","title":"eLearning Teacher Intern","subtitle":"American Baptist College, Nashville, TN","type":"experience","logo":"/assets/timeline/abc.webp"},
+  {"year":"Feb 2025 – Jul 2025","title":"Career Academy Fellow","subtitle":"PayPal, Remote","type":"experience","logo":"/assets/timeline/paypal.webp"},
+  {"year":"Feb 2025 – Present","title":"HBCU Data Science Influencer Student Cohort","subtitle":"AUC Data Science Initiative, Atlanta, GA · Remote","type":"experience","logo":"/assets/timeline/auc.webp"},
+  {"year":"May 2025 – July 2025","title":"Software Development Intern","subtitle":"Amazon LLC, Seattle, WA","type":"experience","logo":"/assets/timeline/amazon.webp"},
+  {"year":"May 2026 – July 2026","title":"Incoming Software Development Intern","subtitle":"Amazon LLC, Seattle, WA","type":"experience","logo":"/assets/timeline/amazon.webp"}
+]

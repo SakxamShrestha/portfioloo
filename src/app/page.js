@@ -1,8 +1,10 @@
 import Welcome from "./components/home/welcomeSection";
 import TechnicalSkills from "./components/home/technicalSkillsSection";
+import TimelineSection from "./components/home/timelineSection";
 import Interests from "./components/home/interestsSection";
 
 import technicalSkills from "./data/technicalSkills.json";
+import timeline from "./data/timeline.json";
 import interests from "./data/interests.json";
 
 import styles from "./styles/home/page.module.css";
@@ -22,6 +24,8 @@ export default function Home() {
       </div>
 
       <TechnicalSkills skills={technicalSkills} />
+
+      <TimelineSection items={timeline} />
 
       <Interests interests={interests} />
     </div>
