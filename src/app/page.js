@@ -1,10 +1,8 @@
 import Welcome from "./components/home/welcomeSection";
 import TechnicalSkills from "./components/home/technicalSkillsSection";
-import Projects from "./components/home/projectsSection";
 import Interests from "./components/home/interestsSection";
 
 import technicalSkills from "./data/technicalSkills.json";
-import projects from "./data/projects.json";
 import interests from "./data/interests.json";
 
 import styles from "./styles/home/page.module.css";
@@ -24,8 +22,6 @@ export default function Home() {
       </div>
 
       <TechnicalSkills skills={technicalSkills} />
-
-      <Projects projects={projects} />
 
       <Interests interests={interests} />
     </div>
