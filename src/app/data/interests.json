@@ -18,7 +18,9 @@
     "name": "Finance (Stock Market)",
     "icon": "FaChartLine",
     "description": "I'm interested in finance and the stock market—how markets work, investing fundamentals, and the intersection of economics with technology and global events. I enjoy learning about valuation, market trends, and long-term investing strategies.",
-    "channels": []
+    "channels": [
+      { "name": "Yahoo Finance", "link": "https://finance.yahoo.com/" }
+    ]
   },
   {
     "name": "Literature",
