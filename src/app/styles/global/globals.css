@@ -168,6 +168,19 @@ svg {
   margin-bottom: 1rem;
 }
 
+.blog-content h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 1px solid var(--blog-post-border, #3e454b);
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
 .blog-content p {
   font-size: 1.125rem;
   margin: 10px 0 10px 0;
