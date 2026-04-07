@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { getBlogPosts } from "../../../lib/getBlogPosts";
-import styles from "../../styles/books/books.module.css";
+import styles from "../../styles/blog/blog.module.css";
 
 export async function generateStaticParams() {
   const blogPosts = getBlogPosts();
@@ -48,19 +48,13 @@ export default async function BlogPost({ params }) {
   });
 
   return (
-    <div className={styles.booksContainer}>
-      <div className={`content ${styles.booksContent}`}>
-        <p style={{ marginBottom: "0.5rem" }}>
-          <Link href="/blog" style={{ opacity: 0.9, textDecoration: "underline" }}>
-            ← Blog
-          </Link>
-        </p>
-        <h1 className={styles.booksTitle} style={{ textAlign: "left", marginBottom: "0.25rem" }}>
-          {post.title}
-        </h1>
-        <p style={{ opacity: 0.8, marginBottom: "1.5rem", fontSize: "0.95rem" }}>
-          {formattedDate}
-        </p>
+    <div className={styles.container}>
+      <div className={`content ${styles.content}`}>
+        <Link href="/blog" className={styles.backLink}>
+          ← Blog
+        </Link>
+        <h1 className={styles.postPageTitle}>{post.title}</h1>
+        <time className={styles.postPageDate}>{formattedDate}</time>
         <article
           className="blog-content"
           dangerouslySetInnerHTML={{ __html: post.content }}
