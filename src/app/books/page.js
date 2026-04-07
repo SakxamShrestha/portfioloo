@@ -42,7 +42,7 @@ export default function Books() {
     <div className={styles.booksContainer}>
       <div className={`content ${styles.booksContent}`}>
         <h1 className={styles.booksTitle}>
-          Collection of books that I&apos;ve read
+          Collection of books that I adore
         </h1>
         <div className={styles.booksList}>
           {books

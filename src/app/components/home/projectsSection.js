@@ -59,6 +59,16 @@ export default function Projects({ projects }) {
           <button className={styles.projectToggle} onClick={prevProject} name="Previous project">
             ← Prev
           </button>
+          <div className={styles.projectDots}>
+            {projects.map((_, i) => (
+              <button
+                key={i}
+                className={`${styles.projectDot} ${i === currentIndex ? styles.projectDotActive : ""}`}
+                onClick={() => setCurrentIndex(i)}
+                aria-label={`Go to project ${i + 1}`}
+              />
+            ))}
+          </div>
           <button className={styles.projectToggle} onClick={nextProject} name="Next project">
             Next →
           </button>

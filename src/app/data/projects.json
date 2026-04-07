@@ -7,7 +7,7 @@
     "year": 2024,
     "github": "https://github.com/SakxamShrestha/chest-cancer-classifier",
     "gradient": "linear-gradient(#176C5C, #1B7862, #1E8368)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(-2deg)"
   },
   {
     "name": "MeroGuru AI",
@@ -23,26 +23,25 @@
       "PostgreSQL"
     ],
     "year": 2025,
-    "github": "https://github.com/SakxamShrestha/sikauneAI",           
+    "github": "https://github.com/SakxamShrestha/sikauneAI",
     "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
-    "rotate": "rotate(2deg)"
+    "rotate": "rotate(0.5deg)"
   },
   {
     "name": "TradeSent.AI",
     "image": "/assets/projects/thumbnails/meroguru-ai.webp",
     "description": "TradeSent.AI is a real-time, automated trading system that utilizes a three-tier architecture to bridge the gap between financial news/social sentiment and trade execution, allowing retail users to trade based on market buzz with minimal latency.",
     "tags": [
-      "Alpaca (Trading & News API)", 
+      "Alpaca (Trading & News API)",
       "FinBERT",
       "Llama 3 (via Groq/Anthropic)",
-      "RLunarCrush API",
+      "LunarCrush API",
       "Redis"
     ],
     "year": 2026,
-    "github": "https://github.com/SakxamShrestha/sentiment-driven-options-trading-system",           
-    "gradient": "linear-gradient(#2082AB, #22699C, #23508D)",
+    "github": "https://github.com/SakxamShrestha/sentiment-driven-options-trading-system",
+    "gradient": "linear-gradient(#7B2FA6, #622492, #4A197E)",
     "rotate": "rotate(2deg)"
-
   }
 ]
 
