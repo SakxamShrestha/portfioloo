@@ -3,54 +3,45 @@
 import { motion } from "motion/react";
 import { FaGithub } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
-
-import Image from "next/image";
 import styles from "../../styles/home/project.module.css";
 
-export default function Project(props) {
+export default function Project({ name, description, tags, year, github, website, gradient, index }) {
   return (
-    <motion.div
-      style={{
-        background: props.gradient,
-        transform: props.rotate,
-      }}
-      className={styles.projectContainer}
+    <motion.article
+      className={styles.projectCard}
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay: index * 0.09 }}
     >
-      <div className={styles.imageContainer}>
-        <Image
-          className={styles.projectThumbnail}
-          src={props.image}
-          width={250}
-          height={150}
-          alt={props.name}
-        />
-      </div>
-      <h2 className={styles.projectName}>{props.name}</h2>
-      <div className={styles.tagContainer}>
-        {props.tags
-          .sort((a, b) => a.localeCompare(b))
-          .map((tag, index) => (
-            <button className={styles.tag} key={index} name={tag}>
-              {tag}
-            </button>
+      <div className={styles.accentBar} style={{ background: gradient }} />
+      <div className={styles.cardBody}>
+        <div className={styles.cardMeta}>
+          <span className={styles.projectIndex}>{String(index + 1).padStart(2, "0")}</span>
+          <span className={styles.projectYear}>{year}</span>
+        </div>
+        <h2 className={styles.projectName}>{name}</h2>
+        <p className={styles.description}>{description}</p>
+        <div className={styles.tagList}>
+          {tags.map((tag, i) => (
+            <span className={styles.tag} key={i}>{tag}</span>
           ))}
-      </div>
-      <p className={styles.description}>{props.description}</p>
-      <div className={styles.links}>
-        <div className={styles.year}>{props.year}</div>
-        <div>
-          {props.github && (
-            <a href={props.github} className={styles.link} target="_blank">
-              <FaGithub className={styles.githubLogo} />
+        </div>
+        <div className={styles.cardFooter}>
+          {github && (
+            <a href={github} className={styles.githubBtn} target="_blank" rel="noopener noreferrer">
+              <FaGithub size={14} />
+              GitHub
             </a>
           )}
-          {props.website && (
-            <a href={props.website} className={styles.link} target="_blank">
-              <IoIosLink className={styles.githubLogo} />
+          {website && (
+            <a href={website} className={styles.liveBtn} target="_blank" rel="noopener noreferrer">
+              <IoIosLink size={14} />
+              Live
             </a>
           )}
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }

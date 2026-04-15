@@ -52,6 +52,10 @@ html.light {
   --technical-skills-background-hover-color: #e2e8f0;
   --project-text-color: #f8fafc;
   --project-tag-background: #e8c9ea;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --tag-bg: #e9eef5;
   --creator-underline-color: #0f766e;
   --blog-post-border: #3e454b;
   --blog-link-underline-color: #2563eb;
@@ -87,6 +91,10 @@ html.dark {
   --technical-skills-background-hover-color: #e2e8f0;
   --project-text-color: #f8fafc;
   --project-tag-background: #171e29;
+  --card-bg: #0c1220;
+  --card-border: #1c2438;
+  --card-shadow: rgba(0, 0, 0, 0.45);
+  --tag-bg: #141c2e;
   --creator-underline-color: #0f766e;
   --blog-post-border: #3e454b;
   --blog-link-underline-color: #718de1;

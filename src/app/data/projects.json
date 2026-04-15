@@ -30,13 +30,17 @@
   {
     "name": "TradeSent.AI",
     "image": "/assets/projects/thumbnails/meroguru-ai.webp",
-    "description": "TradeSent.AI is a real-time, automated trading system that utilizes a three-tier architecture to bridge the gap between financial news/social sentiment and trade execution, allowing retail users to trade based on market buzz with minimal latency.",
+    "description": "AI-powered paper trading simulator combining multi-source financial news ingestion, Claude Haiku sentiment scoring (with Groq Llama 3.3-70B fallback), and LunarCrush social buzz into a live dashboard — with candlestick charts, backtesting, realized P&L tracking, and a risk circuit breaker.",
     "tags": [
-      "Alpaca (Trading & News API)",
-      "FinBERT",
-      "Llama 3 (via Groq/Anthropic)",
-      "LunarCrush API",
-      "Redis"
+      "Python",
+      "Flask",
+      "React 19",
+      "TypeScript",
+      "Claude Haiku",
+      "Alpaca API",
+      "Redis",
+      "Firebase",
+      "LunarCrush"
     ],
     "year": 2026,
     "github": "https://github.com/SakxamShrestha/sentiment-driven-options-trading-system",
