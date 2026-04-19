@@ -49,6 +49,18 @@ export default function Blog() {
         <p className={styles.pageSubtitle}>
           Thoughts on technology, lessons learned, and more.
         </p>
+        <a
+          href="https://medium.com/@sakxamshrestha"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.mediumBanner}
+        >
+          <span className={styles.mediumIcon}>M</span>
+          <span className={styles.mediumBannerText}>
+            I also write on <strong>Medium</strong> — follow me there for more stories and articles.
+          </span>
+          <span className={styles.mediumArrow}>→</span>
+        </a>
         <ul className={styles.postList}>
           {sortedPosts.map((post) => {
             const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
