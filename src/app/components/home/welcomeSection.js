@@ -66,6 +66,7 @@ export default function Welcome() {
             height={275}
             width={233}
             alt="Sakxam"
+            priority
           />
         </motion.div>
       </div>
