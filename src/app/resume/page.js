@@ -124,6 +124,39 @@ export default function Resume() {
                   <i className={styles.text}>Software Development Intern</i>
                 </div>
                 <div className={styles.experienceMeta}>
+                  <p className={styles.text}>May 2026 – July 2026</p>
+                  <p className={styles.text}>Seattle, WA</p>
+                </div>
+              </div>
+              <ul className={styles.list}>
+                <li className={styles.text}>
+                  Revived an offline evaluation tool to compare ML models in an
+                  experiment, reducing evaluation time from <b>2-3 days</b> to
+                  under <b>3 hours</b> and bypassing the revenue risks of
+                  conducting live A/B tests in low-volume production traffic.
+                </li>
+                <li className={styles.text}>
+                  Refactored massive, monolithic legacy functions into{" "}
+                  <b>8</b> concrete Steps and implemented robust validation for{" "}
+                  <b>30+</b> configuration inputs, reducing code complexity by
+                  an estimated <b>40%</b> and improving system execution time by{" "}
+                  <b>50%</b>.
+                </li>
+                <li className={styles.text}>
+                  Developed an AI skill to interpret experimental impact across
+                  amazon products, automating artifact and presentation
+                  generation to save engineers <b>10+ hours per week</b> and
+                  accelerate stakeholder review cycles by <b>50%</b>.
+                </li>
+              </ul>
+            </div>
+            <div className={styles.experienceEntry}>
+              <div className={styles.experienceHeader}>
+                <div className={styles.experienceLeft}>
+                  <b className={styles.text}>Amazon LLC</b>
+                  <i className={styles.text}>Software Development Intern</i>
+                </div>
+                <div className={styles.experienceMeta}>
                   <p className={styles.text}>May 2025 – July 2025</p>
                   <p className={styles.text}>Seattle, WA</p>
                 </div>

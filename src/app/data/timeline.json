@@ -1,14 +1,125 @@
 [
-  {"year":"2019","title":"CVM Secondary High School","subtitle":"Nepal","type":"education","logo":"/assets/timeline/cvm.webp"},
-  {"year":"July 2019 – Oct 2021","title":"Khwopa HSS","subtitle":"Nepal","type":"education","logo":"/assets/timeline/khwopa.webp"},
-  {"year":"Aug 2022 – July 2023","title":"Freelance SAT Tutor","subtitle":"Nepal","type":"experience"},
-  {"year":"Aug 2023 – May 2027","title":"Bachelor of Science in Computer Science","subtitle":"Fisk University, Nashville, TN","type":"education","logo":"/assets/timeline/fisk.webp"},
-  {"year":"March 2024 – May 2024","title":"MetaScholar Intern","subtitle":"Thurgood Marshall College Fund, Atlanta, GA","type":"experience","logo":"/assets/timeline/tmcf.webp"},
-  {"year":"May 2024 – Aug 2024","title":"Data Analytics Intern","subtitle":"Tennessee Education Lottery Corporation, Nashville, TN","type":"experience","logo":"/assets/timeline/tnelc.webp"},
-  {"year":"Aug 2024 – Sep 2024","title":"Web3 Security and Data Analytics Extern","subtitle":"Webacy, Remote","type":"experience","logo":"/assets/timeline/webacy.webp"},
-  {"year":"Aug 2024 – Jan 2025","title":"eLearning Teacher Intern","subtitle":"American Baptist College, Nashville, TN","type":"experience","logo":"/assets/timeline/abc.webp"},
-  {"year":"Feb 2025 – Jul 2025","title":"Career Academy Fellow","subtitle":"PayPal, Remote","type":"experience","logo":"/assets/timeline/paypal.webp"},
-  {"year":"Feb 2025 – Present","title":"HBCU Data Science Influencer Student Cohort","subtitle":"AUC Data Science Initiative, Atlanta, GA · Remote","type":"experience","logo":"/assets/timeline/auc.webp"},
-  {"year":"May 2025 – July 2025","title":"Software Development Intern","subtitle":"Amazon LLC, Seattle, WA","type":"experience","logo":"/assets/timeline/amazon.webp"},
-  {"year":"May 2026 – July 2026","title":"Incoming Software Development Intern","subtitle":"Amazon LLC, Seattle, WA","type":"experience","logo":"/assets/timeline/amazon.webp"}
+  {
+    "start": "2019",
+    "year": "2019",
+    "title": "CVM Secondary High School",
+    "location": "Nepal",
+    "mark": "CV",
+    "type": "education",
+    "logo": "/assets/timeline/cvm.webp"
+  },
+  {
+    "start": "2019",
+    "year": "Jul 2019 – Oct 2021",
+    "title": "Khwopa Higher Secondary School",
+    "location": "Nepal",
+    "mark": "KH",
+    "type": "education",
+    "logo": "/assets/timeline/khwopa.webp"
+  },
+  {
+    "start": "2022",
+    "year": "Aug 2022 – Jul 2023",
+    "title": "Freelance SAT Tutor",
+    "location": "Nepal",
+    "mark": "SAT",
+    "type": "experience"
+  },
+  {
+    "start": "2023",
+    "year": "Aug 2023 – May 2027",
+    "title": "Bachelor of Science in Computer Science",
+    "org": "Fisk University",
+    "location": "Nashville, TN",
+    "mark": "FU",
+    "type": "education",
+    "ongoing": true,
+    "logo": "/assets/timeline/fisk.webp"
+  },
+  {
+    "start": "2024",
+    "year": "Mar 2024 – May 2024",
+    "title": "MetaScholar Intern",
+    "org": "Thurgood Marshall College Fund",
+    "location": "Atlanta, GA",
+    "mark": "TMCF",
+    "type": "experience",
+    "highlight": "Built a Solidity smart contract that automated transaction processing and cut manual intervention by 70%.",
+    "logo": "/assets/timeline/tmcf.webp"
+  },
+  {
+    "start": "2024",
+    "year": "May 2024 – Aug 2024",
+    "title": "Data Analytics Intern",
+    "org": "Tennessee Education Lottery Corporation",
+    "location": "Nashville, TN",
+    "mark": "TEL",
+    "type": "experience",
+    "highlight": "Cleaned 50K+ rows of ticket sales data in Python and shipped Tableau dashboards for the Scientific Games team.",
+    "logo": "/assets/timeline/tnelc.webp"
+  },
+  {
+    "start": "2024",
+    "year": "Aug 2024 – Sep 2024",
+    "title": "Web3 Security and Data Analytics Extern",
+    "org": "Webacy",
+    "location": "Remote",
+    "mark": "WB",
+    "type": "experience",
+    "highlight": "Labeled 50+ critical smart contract vulnerabilities across a 10,000-entry dataset.",
+    "logo": "/assets/timeline/webacy.webp"
+  },
+  {
+    "start": "2024",
+    "year": "Aug 2024 – Jan 2025",
+    "title": "eLearning Teacher Intern",
+    "org": "American Baptist College",
+    "location": "Nashville, TN",
+    "mark": "ABC",
+    "type": "experience",
+    "logo": "/assets/timeline/abc.webp"
+  },
+  {
+    "start": "2025",
+    "year": "Feb 2025 – Jul 2025",
+    "title": "Career Academy Fellow",
+    "org": "PayPal",
+    "location": "Remote",
+    "mark": "PP",
+    "type": "experience",
+    "logo": "/assets/timeline/paypal.webp"
+  },
+  {
+    "start": "2025",
+    "year": "Feb 2025 – Present",
+    "title": "HBCU Data Science Influencer Student Cohort",
+    "org": "AUC Data Science Initiative",
+    "location": "Atlanta, GA · Remote",
+    "mark": "AUC",
+    "type": "experience",
+    "ongoing": true,
+    "logo": "/assets/timeline/auc.webp"
+  },
+  {
+    "start": "2025",
+    "year": "May 2025 – Jul 2025",
+    "title": "Software Development Intern",
+    "org": "Amazon LLC",
+    "location": "Seattle, WA",
+    "mark": "AMZ",
+    "type": "experience",
+    "highlight": "Prototyped an LLM-powered internal assistant on Lambda, DynamoDB, and Bedrock, using MCP to keep context fresh.",
+    "logo": "/assets/timeline/amazon.webp"
+  },
+  {
+    "start": "2026",
+    "year": "May 2026 – Jul 2026",
+    "title": "Software Development Intern",
+    "org": "Amazon LLC",
+    "location": "Seattle, WA",
+    "mark": "AMZ",
+    "type": "experience",
+    "highlight": "Revived an offline ML model evaluation tool, taking a 2–3 day comparison down to under 3 hours.",
+    "logo": "/assets/timeline/amazon.webp"
+  }
 ]

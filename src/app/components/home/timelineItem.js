@@ -2,64 +2,67 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
+
 import styles from "../../styles/home/timeline.module.css";
 
-export default function TimelineItem({ item, isLeft }) {
-  const { theme } = useTheme();
-  const [logoError, setLogoError] = useState(false);
+export default function TimelineItem({ item, index, reduceMotion }) {
+  const [logoFailed, setLogoFailed] = useState(false);
+  const showLogo = Boolean(item.logo) && !logoFailed;
+  const mark = item.mark ?? item.title.slice(0, 2).toUpperCase();
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5 }}
-      className={`${styles.timelineItem} ${isLeft ? styles.left : styles.right}`}
+    <motion.li
+      className={`${styles.item} ${styles[item.type]}`}
+      initial={reduceMotion ? false : { opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{
+        duration: 0.45,
+        delay: reduceMotion ? 0 : Math.min(index, 3) * 0.07,
+        ease: [0.22, 1, 0.36, 1],
+      }}
     >
-      <motion.div
-        className={styles.content}
-        whileHover={{
-          scale: 1.02,
-          transition: { duration: 0.2 },
-          boxShadow:
-            theme === "dark"
-              ? "0 8px 24px rgba(100, 255, 218, 0.15)"
-              : "0 8px 24px rgba(15, 118, 110, 0.2)",
-        }}
-      >
-        <div className={styles.cardHeader}>
-          {item.logo && !logoError && (
-            <div className={styles.logo}>
-              <Image
-                src={item.logo}
-                alt=""
-                width={24}
-                height={24}
-                unoptimized
-                onError={() => setLogoError(true)}
-              />
-            </div>
-          )}
-          <div className={styles.headerText}>
-            <div className={styles.yearBadge}>
-              <span>{item.year}</span>
-            </div>
-            <h3 className={styles.title}>{item.title}</h3>
-          </div>
-        </div>
-        {item.subtitle && <p className={styles.subtitle}>{item.subtitle}</p>}
-        {item.description && (
-          <p className={styles.description}>{item.description}</p>
+      <div className={styles.node}>
+        {showLogo ? (
+          <Image
+            src={item.logo}
+            alt=""
+            width={44}
+            height={44}
+            unoptimized
+            className={styles.nodeLogo}
+            onError={() => setLogoFailed(true)}
+          />
+        ) : (
+          <span className={styles.mark} data-len={mark.length}>
+            {mark}
+          </span>
         )}
-        <span
-          className={`${styles.typeBadge} ${styles[item.type]}`}
-          title={item.type}
-        >
-          {item.type}
-        </span>
-      </motion.div>
-    </motion.div>
+        {item.ongoing && <span className={styles.pulse} aria-hidden="true" />}
+      </div>
+
+      <div className={styles.card}>
+        <p className={styles.dates}>
+          {item.year}
+          {item.ongoing && <span className={styles.live}>now</span>}
+        </p>
+        <h3 className={styles.title}>{item.title}</h3>
+        <p className={styles.meta}>
+          {item.org && <span className={styles.org}>{item.org}</span>}
+          {item.org && item.location && (
+            <span className={styles.metaDot} aria-hidden="true">
+              ·
+            </span>
+          )}
+          {item.location && (
+            <span className={styles.location}>{item.location}</span>
+          )}
+        </p>
+        {item.highlight && (
+          <p className={styles.highlight}>{item.highlight}</p>
+        )}
+      </div>
+    </motion.li>
   );
 }
