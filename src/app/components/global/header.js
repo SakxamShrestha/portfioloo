@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
 import { FaBlog, FaBook, FaFolderOpen, FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import { FaBookOpenReader } from "react-icons/fa6";
 import { SiLinktree } from "react-icons/si";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
@@ -43,6 +44,9 @@ export default function Header() {
             </Link>
             <Link className={styles.title} href="/books">
               <h2>Books</h2>
+            </Link>
+            <Link className={styles.title} href="/reading">
+              <h2>Reading</h2>
             </Link>
             <Link className={styles.title} href="/resume">
               <h2>Resume</h2>
@@ -188,6 +192,22 @@ export default function Header() {
                     <h2 className={styles.menuLinkText}>Books</h2>
                     <div>
                       <FaBook className={styles.pageIcon} />
+                    </div>
+                  </motion.div>
+                </Link>
+                <Link
+                  className={styles.menuLink}
+                  href="/reading"
+                  onClick={openHamburgerMenu}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={styles.menuButton}
+                  >
+                    <h2 className={styles.menuLinkText}>Reading</h2>
+                    <div>
+                      <FaBookOpenReader className={styles.pageIcon} />
                     </div>
                   </motion.div>
                 </Link>

@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 60vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2.8rem;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.1;
+}
+
+.pageSubtitle {
+  font-size: 1rem;
+  opacity: 0.75;
+  margin: 0 0 2rem 0;
+}
+
+.count {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin: 0 0 2.5rem 0;
+}
+
+.yearGroup {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.year {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--blog-post-border, #3e454b);
+}
+
+.articleList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.empty {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+}

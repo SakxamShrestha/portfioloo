@@ -1,0 +1,71 @@
+.article {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--card-border);
+  width: 100%;
+}
+
+.article:last-child {
+  border-bottom: none;
+}
+
+.link {
+  color: var(--text-color);
+  transition: 0.15s ease-in-out;
+}
+
+.link:hover {
+  opacity: 0.75;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0 0 0.4rem 0;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--book-author-color);
+}
+
+.meta > span + span::before {
+  content: "·";
+  margin-right: 0.5rem;
+  opacity: 0.6;
+}
+
+.source {
+  font-variant-numeric: tabular-nums;
+}
+
+.date {
+  white-space: nowrap;
+}
+
+.note {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin: 0.6rem 0 0 0;
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: var(--text-color);
+  opacity: 0.85;
+}

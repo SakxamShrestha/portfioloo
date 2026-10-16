@@ -1,0 +1,38 @@
+[
+  {
+    "title": "The Log: What every software engineer should know about real-time data's unifying abstraction",
+    "url": "https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying",
+    "source": "engineering.linkedin.com",
+    "author": "Jay Kreps",
+    "date": "2026-10-10",
+    "tags": [
+      "distributed-systems",
+      "kafka"
+    ],
+    "note": "Placeholder entry — replace with something you actually read."
+  },
+  {
+    "title": "What Every Programmer Should Know About Memory",
+    "url": "https://people.freebsd.org/~lstewart/articles/cpumemory.pdf",
+    "source": "people.freebsd.org",
+    "author": "Ulrich Drepper",
+    "date": "2026-10-05",
+    "tags": [
+      "systems",
+      "performance"
+    ],
+    "note": ""
+  },
+  {
+    "title": "Designing Data-Intensive Applications: the hidden cost of consistency",
+    "url": "https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html",
+    "source": "martin.kleppmann.com",
+    "author": "Martin Kleppmann",
+    "date": "2026-09-28",
+    "tags": [
+      "databases",
+      "cap"
+    ],
+    "note": ""
+  }
+]

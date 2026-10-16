@@ -1,0 +1,83 @@
+name: Add reading entry
+
+# Triggered from a phone by POSTing a repository_dispatch event:
+#
+#   curl -X POST https://api.github.com/repos/SakxamShrestha/portfioloo/dispatches \
+#     -H "Authorization: Bearer $TOKEN" \
+#     -H "Accept: application/vnd.github+json" \
+#     -d '{"event_type":"add-reading","client_payload":{"url":"https://..."}}'
+#
+# See docs/reading-list-shortcut.md for the iOS Shortcut setup.
+
+on:
+  repository_dispatch:
+    types: [add-reading]
+
+concurrency:
+  group: reading-list
+  cancel-in-progress: false
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Append entry
+        env:
+          READING_PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+        run: node scripts/addReading.mjs
+
+      - name: Validate JSON
+        run: |
+          node -e "
+            const list = JSON.parse(require('fs').readFileSync('src/app/data/readingList.json', 'utf8'));
+            if (!Array.isArray(list)) throw new Error('readingList.json is not an array');
+            for (const entry of list) {
+              if (!entry.url || !entry.title) throw new Error('entry missing url or title');
+            }
+            console.log('readingList.json valid, ' + list.length + ' entries');
+          "
+
+      - name: Commit and push
+        id: commit
+        run: |
+          if git diff --quiet -- src/app/data/readingList.json; then
+            echo "No change (duplicate url), skipping commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/app/data/readingList.json
+          git commit -m "Log a new reading-list entry"
+          git push
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  # A push made with GITHUB_TOKEN does not trigger deploy.yml, so call it here.
+  deploy:
+    needs: add
+    if: needs.add.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.add.outputs.sha }}
