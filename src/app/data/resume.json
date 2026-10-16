@@ -1,0 +1,92 @@
+{
+  "name": "Sakxam Shrestha",
+  "pdf": "/assets/resume/resume.pdf",
+  "contacts": [
+    { "kind": "email", "label": "sakxamshrestha57@gmail.com", "href": "mailto:sakxamshrestha57@gmail.com" },
+    { "kind": "linkedin", "label": "in/shresthasakxam", "href": "https://www.linkedin.com/in/sakxam-shrestha-3a817a237/" },
+    { "kind": "github", "label": "github.com/SakxamShrestha", "href": "https://github.com/SakxamShrestha" },
+    { "kind": "website", "label": "sakxamshrestha.com", "href": "https://www.sakxamshrestha.com/" }
+  ],
+  "education": [
+    {
+      "school": "Fisk University",
+      "credential": "Bachelor of Science in Computer Science",
+      "timeframe": "Expected: May 2027",
+      "detail": "GPA: 3.91/4.0"
+    }
+  ],
+  "coursework": "Data Structures & Algorithms (Java), Intro to Computer Science (Python & Java), Calculus (1 & 2), Discrete Maths, Machine Learning & Projects, Database Management, Computer Organization, Computer Security, Quantum Computing.",
+  "experience": [
+    {
+      "organization": "Amazon LLC",
+      "role": "Software Development Intern",
+      "timeframe": "May 2026 – July 2026",
+      "location": "Seattle, WA",
+      "bullets": [
+        "Revived an offline evaluation tool to compare ML models in an experiment, reducing evaluation time from 2-3 days to under 3 hours and bypassing the revenue risks of conducting live A/B tests in low-volume production traffic.",
+        "Refactored massive, monolithic legacy functions into 8 concrete Steps and implemented robust validation for 30+ configuration inputs, reducing code complexity by an estimated 40% and improving system execution time by 50%.",
+        "Developed an AI skill to interpret experimental impact across Amazon products, automating artifact and presentation generation to save engineers 10+ hours per week and accelerate stakeholder review cycles by 50%."
+      ]
+    },
+    {
+      "organization": "Amazon LLC",
+      "role": "Software Development Intern",
+      "timeframe": "May 2025 – July 2025",
+      "location": "Seattle, WA",
+      "bullets": [
+        "Under the Personalization department, designed and prototyped an LLM-powered internal chat assistant projected to reduce documentation and ticket lookup time by approximately 30% for on-call support engineers, optimizing operational workflow.",
+        "Integrated MCP (Model Context Protocol) to dynamically extract and maintain context for LLMs, improving response relevance by over 40% in internal QA evaluations.",
+        "Built scalable backend services using AWS Services (Lambda, DynamoDB, Bedrock, SQS), achieving sub-200ms average latency under optimized conditions, with modular design supporting future toolchain integrations."
+      ]
+    },
+    {
+      "organization": "Webacy",
+      "role": "Web3 Security and Data Analytics Extern",
+      "timeframe": "August 2024 – September 2024",
+      "location": "Remote",
+      "bullets": [
+        "Conducted a comprehensive analysis of smart contract vulnerabilities, identifying and labeling 50+ critical risks; this initiative enhanced the team's data categorization processes and improved overall risk assessment accuracy by 25%.",
+        "Conducted frequency and correlation analysis on a dataset comprising 10,000+ entries, identifying critical vulnerabilities, which streamlined reporting processes and enhanced data accuracy by 25% through targeted statistical tools."
+      ]
+    },
+    {
+      "organization": "Tennessee Education Lottery Corporation",
+      "role": "Data Analytics Intern",
+      "timeframe": "May 2024 – August 2024",
+      "location": "Nashville, TN",
+      "bullets": [
+        "Interned under Scientific Games Department, cleaned and processed 50K+ rows of Ticket Sales Excel data using Python in Linux environment, then created interactive dashboards in Tableau, improving data-driven decision-making by 30%.",
+        "Built MySQL queries and dashboards to analyze sales trends, providing actionable insights for business strategy."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "TV Series NLP Analyzer",
+      "stack": "Python, Scrapy, Spacy, Llama 3.1, Gradio",
+      "timeframe": "March 2024",
+      "bullets": [
+        "Developed a Natural Language Processing system to scrape and analyze over 10,000+ character dialogues using Scrapy and Spacy, targeting high 95% accuracy in character relationship detection.",
+        "Implemented zero-shot and custom text classifiers with a focus on achieving high precision in multi-class text classification and theme extraction.",
+        "Created an interactive web UI with Gradio to integrate and showcase NLP models, including a character chatbot trained with Llama 3.1, improving response accuracy."
+      ]
+    },
+    {
+      "name": "End-to-End Chest Cancer Classification",
+      "stack": "Python, AWS S3, SageMaker, GitHub Actions, Docker, MLflow, DVC",
+      "timeframe": "February 2024",
+      "bullets": [
+        "Built a deep learning model using EfficientNet-B3 for chest cancer classification, achieving 85% accuracy on a dataset of 5,000+ chest X-ray images.",
+        "Automated the ML pipeline with SageMaker Pipelines, MLflow, and DVC, improving experiment tracking and model versioning, reducing manual intervention by 70%.",
+        "Implemented CI/CD with GitHub Actions, Docker, and AWS, deploying the model with API Gateway for real-time predictions, cutting deployment time by 50%."
+      ]
+    }
+  ],
+  "skills": [
+    { "label": "Programming Languages", "value": "Python, C++, JavaScript, SQL, HTML, CSS/SCSS" },
+    { "label": "Programming Frameworks", "value": "React, React Native, Node.js" },
+    { "label": "Developer Tools", "value": "Firebase, Cloudflare, Netlify, Git, GitHub, iOS, Android, Yarn, NPM" },
+    { "label": "Programming Libraries", "value": "Tailwind, Bootstrap" },
+    { "label": "Productivity Tools and OS", "value": "MS Office, MS Teams, Google Suite, Jira, Adobe Photoshop, OBS Studio, Linux" }
+  ]
+}

@@ -1,0 +1,73 @@
+/* Flat tier: a real page for everyone the boot gate routes away from WebGL. */
+
+.flat {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  background: var(--void);
+  color: var(--pellet);
+  font-family: var(--font-display);
+}
+
+.flatInner {
+  max-width: 56ch;
+}
+
+.build {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pellet-faint);
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  font-stretch: 85%;
+  letter-spacing: -0.02em;
+}
+
+.body {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  color: var(--pellet-dim);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 2rem 0;
+}
+
+.links a {
+  color: var(--pellet);
+  text-decoration: none;
+  border-bottom: 1px solid var(--wall);
+  padding-bottom: 2px;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: var(--player);
+  border-color: var(--player);
+}
+
+.exit {
+  color: var(--pellet-dim);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.exit:hover,
+.exit:focus-visible {
+  color: var(--player);
+}

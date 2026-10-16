@@ -1,0 +1,57 @@
+/*
+ * Stage layout for the v2 experience.
+ *
+ * The canvas is fixed to the viewport and the HUD sits above it in its own
+ * layer. Nothing scrolls: this page is a room, not a document.
+ */
+
+.stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--void);
+}
+
+.canvasLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Neutral shell shown while the boot gate decides, and while the 3D chunk
+ * downloads. Same colour as the scene background so there is no flash. */
+.shell,
+.loading {
+  position: fixed;
+  inset: 0;
+  background: var(--void);
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--player),
+    transparent
+  );
+  animation: sweep 1.4s ease-in-out infinite;
+}
+
+@keyframes sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading::after {
+    animation: none;
+  }
+}

@@ -1,0 +1,164 @@
+/*
+ * DOM overlay chrome.
+ *
+ * The layer is pointer-events: none so the canvas keeps receiving pointer
+ * movement for the camera rig; individual controls opt back in.
+ */
+
+.hud {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  pointer-events: none;
+  color: var(--pellet);
+  font-family: var(--font-display);
+}
+
+.hud a,
+.hud button {
+  pointer-events: auto;
+}
+
+.hudTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.exit {
+  color: var(--pellet-dim);
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.exit:hover,
+.exit:focus-visible {
+  color: var(--player);
+}
+
+.build {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pellet-faint);
+}
+
+.hudCentre {
+  align-self: center;
+  max-width: 34ch;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  font-stretch: 85%;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  margin: 0.75rem 0 0;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  line-height: 1.5;
+  color: var(--pellet-dim);
+}
+
+.hudNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.navLink {
+  position: relative;
+  color: var(--pellet);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding-block: 0.25rem;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background: var(--player);
+  transition: right 0.25s ease;
+}
+
+.navLink:hover::after,
+.navLink:focus-visible::after {
+  right: 0;
+}
+
+.hudBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.audioCluster {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.meter {
+  width: 10px;
+  height: 64px;
+  display: block;
+}
+
+.audioButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--wall);
+  border-radius: 999px;
+  background: var(--void-raised);
+  color: var(--pellet);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.audioButton:hover,
+.audioButton:focus-visible {
+  border-color: var(--player);
+  color: var(--player);
+}
+
+.audioLabel {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.audioError {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--pellet-faint);
+}
+
+@media (max-width: 640px) {
+  .audioLabel {
+    display: none;
+  }
+}

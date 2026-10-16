@@ -1,6 +1,7 @@
 import "./styles/global/globals.css";
 
 import Header from "./components/global/header";
+import ImmersiveGate from "./components/global/immersiveGate";
 import Footer from "./components/global/footer";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -148,9 +149,13 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Header />
+          <ImmersiveGate>
+            <Header />
+          </ImmersiveGate>
           <main>{children}</main>
-          <Footer />
+          <ImmersiveGate>
+            <Footer />
+          </ImmersiveGate>
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

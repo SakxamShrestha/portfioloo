@@ -1,0 +1,191 @@
+/*
+ * The board and its arcade chrome.
+ *
+ * Layout is a single column: status bar, board, controls. The board is the one
+ * place this design spends boldness, so everything around it is quiet.
+ */
+
+.cabinet {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: clamp(1rem, 3vh, 2rem);
+  padding: clamp(1rem, 3vw, 2rem);
+  background: var(--void);
+}
+
+/* ---- Status bar ---- */
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  font-family: var(--font-display);
+}
+
+.name {
+  margin: 0;
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--pellet);
+}
+
+.scores {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.scoreLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--pellet-faint);
+}
+
+/* Tabular figures so the counter does not jitter as it climbs. */
+.scoreValue {
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  font-variant-numeric: tabular-nums;
+  color: var(--player);
+}
+
+.scoreValueQuiet {
+  composes: scoreValue;
+  color: var(--pellet-dim);
+}
+
+/* ---- Board ---- */
+
+.stage {
+  display: grid;
+  place-items: center;
+  min-height: 0;
+}
+
+.boardFrame {
+  width: 100%;
+  max-width: 60rem;
+  /* The wall colour bleeds past the board edge, as phosphor does on glass. */
+  box-shadow: 0 0 60px -20px var(--wall);
+}
+
+.board {
+  display: block;
+  margin: 0 auto;
+  touch-action: none;
+}
+
+/* ---- Controls and navigation ---- */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.hint {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--pellet-faint);
+}
+
+/*
+ * The real navigation.
+ *
+ * Present for everyone, always. The board is a faster route for people who
+ * want to play with it, not a gate in front of the content.
+ */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.link {
+  position: relative;
+  padding: 0.3rem 0;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: var(--pellet);
+  text-decoration: none;
+}
+
+/* A pellet sits in front of each link: the corridor vocabulary, carried. */
+.link::before {
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--pellet-faint);
+  transform: translateY(-50%);
+  transition: background 0.15s steps(2), box-shadow 0.15s steps(2);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--player);
+}
+
+.link:hover::before,
+.link:focus-visible::before {
+  background: var(--player);
+  box-shadow: 0 0 8px var(--player);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--player);
+  outline-offset: 4px;
+}
+
+/* ---- Wake sequence: the one piece of motion nobody asked for ---- */
+
+.wake {
+  animation: wake 0.6s steps(4) both;
+}
+
+@keyframes wake {
+  from {
+    opacity: 0;
+    filter: brightness(3);
+  }
+  to {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wake {
+    animation: none;
+  }
+
+  .link::before {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .links {
+    gap: 0.5rem 1.25rem;
+  }
+
+  .hint {
+    order: 2;
+  }
+}

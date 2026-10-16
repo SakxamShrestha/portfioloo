@@ -1,0 +1,73 @@
+/*
+ * v2 design tokens: arcade-maze interface.
+ *
+ * Scoped to .v2Root rather than :root so nothing leaks into the flat site's
+ * token set. Font family values are filled in by next/font via the variable
+ * names below.
+ *
+ * The palette is CRT phosphor. Walls carry the structure, which is why this
+ * is not simply a dark page with one bright accent: the blue is doing
+ * architectural work, and the amber appears only where the visitor is.
+ */
+
+.v2Root {
+  /* Surfaces */
+  --void: #05060b;
+  --void-raised: #0b0e1a;
+
+  /* Maze structure */
+  --wall: #2b3fd9;
+  --wall-glow: #5b6bff;
+
+  /* Content */
+  --pellet: #f2e8c9;
+  --pellet-dim: #8d8773;
+  --pellet-faint: #4a4740;
+
+  /* The visitor */
+  --player: #ffc21c;
+
+  /* Used once, for the thing that actually matters */
+  --alarm: #ff4d5e;
+
+  /* Type roles: dot-matrix for display and numerals, grotesque for prose. */
+  --font-display: var(--font-v2-display), "Courier New", monospace;
+  --font-body: var(--font-v2-body), system-ui, sans-serif;
+
+  /* The character cell the whole interface aligns to. */
+  --cell: 1.5rem;
+
+  min-height: 100vh;
+  background: var(--void);
+  color: var(--pellet);
+  font-family: var(--font-body);
+  color-scheme: dark;
+}
+
+/*
+ * Scanline veil.
+ *
+ * One fixed overlay rather than a per-element effect, so it costs a single
+ * composited layer. Hidden from assistive tech and from print.
+ */
+.v2Root::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.22) 3px,
+    rgba(0, 0, 0, 0.22) 4px
+  );
+  mix-blend-mode: multiply;
+}
+
+@media print {
+  .v2Root::after {
+    display: none;
+  }
+}

@@ -2,6 +2,7 @@ import Welcome from "./components/home/welcomeSection";
 import TechnicalSkills from "./components/home/technicalSkillsSection";
 import TimelineSection from "./components/home/timelineSection";
 import Interests from "./components/home/interestsSection";
+import V2Teaser from "./components/home/v2Teaser";
 
 import technicalSkills from "./data/technicalSkills.json";
 import timeline from "./data/timeline.json";
@@ -22,6 +23,8 @@ export default function Home() {
           <path d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z"></path>
         </svg>
       </div>
+
+      <V2Teaser />
 
       <TechnicalSkills skills={technicalSkills} />
 

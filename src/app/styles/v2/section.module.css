@@ -1,0 +1,279 @@
+/*
+ * Content pages.
+ *
+ * The board is the loud part of this design, so these pages stay disciplined:
+ * a character grid, left-aligned prose, numerals right-aligned in their own
+ * column like a score table. No cards, no shadows, no border radius.
+ *
+ * Dividers are rows of pellet dots. That is the corridor vocabulary carried
+ * in from the board, so the device marks structure rather than decorating it.
+ */
+
+.page {
+  min-height: 100vh;
+  background: var(--void);
+  color: var(--pellet);
+}
+
+/* ---- Navigation ---- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding: 0.9rem clamp(1rem, 4vw, 3rem);
+  background: var(--void);
+  border-bottom: 2px solid var(--wall);
+  font-family: var(--font-display);
+}
+
+.navHome {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--pellet-dim);
+  text-decoration: none;
+}
+
+.navHome:hover,
+.navHome:focus-visible {
+  color: var(--player);
+}
+
+.navLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+}
+
+.navLink,
+.navLinkCurrent {
+  padding-block: 0.2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+
+.navLink {
+  color: var(--pellet-dim);
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  color: var(--pellet);
+}
+
+/* The current section is where the player is standing, so it takes the
+ * player's own colour. */
+.navLinkCurrent {
+  color: var(--player);
+}
+
+.navLink:focus-visible,
+.navLinkCurrent:focus-visible,
+.navHome:focus-visible {
+  outline: 2px solid var(--player);
+  outline-offset: 3px;
+}
+
+/* ---- Page frame ---- */
+
+.main {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 3rem) 6rem;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--pellet);
+}
+
+.count {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
+  color: var(--pellet-faint);
+  white-space: nowrap;
+}
+
+.lede {
+  /* Under 80 characters, per the type scale. */
+  max-width: 62ch;
+  margin: 0.85rem 0 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--pellet-dim);
+}
+
+/* ---- Pellet divider: the corridor, carried into the content ---- */
+
+.list {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  border-top: 2px solid var(--wall);
+}
+
+.row {
+  display: block;
+  padding: 1.5rem 0;
+  color: inherit;
+  text-decoration: none;
+  /* The dots are the rule. 4px dot on a 12px pitch. */
+  border-bottom: 2px dotted var(--pellet-faint);
+}
+
+.row:hover,
+.row:focus-visible {
+  background: var(--void-raised);
+}
+
+.row:focus-visible {
+  outline: 2px solid var(--player);
+  outline-offset: -2px;
+}
+
+.rowTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1.5rem;
+}
+
+.itemTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--pellet);
+}
+
+.row:hover .itemTitle,
+.row:focus-visible .itemTitle {
+  color: var(--player);
+}
+
+/* Numerals sit in their own right-aligned column, like a score table. */
+.meta {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+  color: var(--pellet-faint);
+  white-space: nowrap;
+}
+
+.body {
+  max-width: 68ch;
+  margin: 0.6rem 0 0;
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: var(--pellet-dim);
+}
+
+/* ---- Tags ---- */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.75rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--wall-glow);
+}
+
+/* ---- Project grid ---- */
+
+.grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: clamp(2rem, 5vw, 3rem);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+}
+
+/* A corridor, not a card: structure on two sides only. */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 0 1.5rem 1.25rem;
+  border-left: 2px solid var(--wall);
+  border-bottom: 2px dotted var(--pellet-faint);
+}
+
+.card:hover,
+.card:focus-within {
+  border-left-color: var(--player);
+}
+
+.thumb {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--wall);
+  object-fit: cover;
+}
+
+.cardLinks {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--player);
+  text-decoration: none;
+}
+
+.cardLink:hover,
+.cardLink:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.empty {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 2px dotted var(--pellet-faint);
+  border-bottom: 2px dotted var(--pellet-faint);
+  font-family: var(--font-display);
+  color: var(--pellet-faint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row,
+  .card {
+    transition: none;
+  }
+}
